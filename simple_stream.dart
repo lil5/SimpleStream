@@ -4,7 +4,7 @@ class SimpleStream<T> {
   late StreamController<T> _controller;
   late Stream<T> _stream;
   SimpleStream() {
-    _controller = StreamController<T>();
+    _controller = StreamController<T>.broadcast();
     _stream = _controller.stream;
   }
 
